@@ -7,6 +7,7 @@
 - CSS
 - JavaScript
 - Swiper.js
+- Bootstrap
 
 ## Development Environment And Tools
 - Visual Studio Code
