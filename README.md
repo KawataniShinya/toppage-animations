@@ -6,11 +6,13 @@
 - SCSS
 - CSS
 - JavaScript
+- Swiper.js
 
 ## Development Environment And Tools
 - Visual Studio Code
 - Live Server
 - Live Sass Compiler
+- Mixin
 
 ## Demo
 
