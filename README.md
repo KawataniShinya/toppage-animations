@@ -8,6 +8,7 @@
 - JavaScript
 - Swiper.js
 - Bootstrap
+- Google Fonts
 
 ## Development Environment And Tools
 - Visual Studio Code
