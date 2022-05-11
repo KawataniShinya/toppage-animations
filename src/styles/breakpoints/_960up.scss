@@ -4,25 +4,39 @@ Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
 .font-sm {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .font-md {
-    font-size: 19px;
+  font-size: 19px;
 }
 
 .font-lr {
-    font-size: 23px;
+  font-size: 23px;
 }
 
 .font-lg {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .mb-lg {
-    margin-bottom: 150px !important;
+  margin-bottom: 150px !important;
 }
 
 .pb-lg {
-    padding-bottom: 150px !important;
+  padding-bottom: 150px !important;
+}
+
+.relax {
+  &__inner {
+    @include p-base($top: -20%, $height: 120%) {
+      background: $cBgGray;
+    }
+  }
+  &__item {
+    flex-basis: 25%;
+  }
+  &__img {
+    height: 350px;
+  }
 }
