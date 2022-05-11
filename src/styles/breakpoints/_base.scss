@@ -74,9 +74,27 @@ img {
     @extend .flex;
   }
 
+  &__item {
+    margin: 0 0 10px;
+    position: relative;
+  }
+
   &__title {
     @extend .font-lr;
     @extend .mb-sm;
+
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100px;
+    top: 5px;
+    left: 5px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+
+    color: aqua;
+    text-align: center;
+
+    z-index: 2;
   }
 
   &__btn {

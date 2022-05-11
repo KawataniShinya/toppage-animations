@@ -817,6 +817,25 @@ img {
           justify-content: center;
 }
 
+.spots__item {
+  margin: 0 0 10px;
+  position: relative;
+}
+
+.spots__title {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100px;
+  top: 5px;
+  left: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  color: aqua;
+  text-align: center;
+  z-index: 2;
+}
+
 .spots__btn {
   text-align: center;
   -ms-flex-preferred-size: 100%;
@@ -849,21 +868,10 @@ Stylesheet: 600px以上のタブレットやモニタで適用
     -ms-flex-preferred-size: 32.7%;
         flex-basis: 32.7%;
     margin: 0 3px 10px;
-    position: relative;
   }
   .spots__title {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100px;
-    top: 5px;
-    left: 5px;
-    border-radius: 10px;
-    -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
-            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
     font-size: 25px;
     font-weight: 600;
-    color: aqua;
-    text-align: center;
   }
 }
 
