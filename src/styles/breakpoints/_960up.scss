@@ -40,3 +40,17 @@ Stylesheet: 960px以上のモニタで適用
     height: 350px;
   }
 }
+
+.interests {
+  &__inner {
+    padding: 50px 150px;
+  }
+
+  &__img {
+    height: 400px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+  }
+}
