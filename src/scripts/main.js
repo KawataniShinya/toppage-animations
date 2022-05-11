@@ -16,6 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  const sota = new ScrollObserver(".animate-title", callbackTextAnimation);
-  const sotta = new ScrollObserver(".tween-animate-title", callbackTweenTextAnimation);
+  const soText = new ScrollObserver(".animate-title", callbackTextAnimation);
+  const soTween = new ScrollObserver(".tween-animate-title", callbackTweenTextAnimation);
+  
+
+
+  const _inviewAnimation = function(el, inview) {
+    if(inview) {
+      el.classList.add('inview');
+    } else {
+      el.classList.remove('inview');
+    }
+  }
+
+  const soInview = new ScrollObserver(".cover-slide", _inviewAnimation);
 });

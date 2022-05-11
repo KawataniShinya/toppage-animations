@@ -239,6 +239,10 @@
           transform: translate(-50%, -50%);
 }
 
+.hero {
+  overflow: hidden;
+}
+
 .hero__title {
   position: absolute;
   top: 50%;
@@ -540,7 +544,6 @@
 .cover-slide {
   position: relative;
   overflow: hidden;
-  margin-bottom: 80vh;
 }
 
 .cover-slide::after {
@@ -724,7 +727,6 @@
 }
 
 .bg-img-zoom {
-  background-image: url(images/image-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -755,7 +757,7 @@ img {
   vertical-align: bottom;
 }
 
-.font-sm {
+.font-sm, .sub-title {
   font-size: 14px;
 }
 
@@ -763,15 +765,15 @@ img {
   font-size: 17px;
 }
 
-.font-lr {
+.font-lr, .spots__title {
   font-size: 17px;
 }
 
-.font-lg {
+.font-lg, .main-title {
   font-size: 25px;
 }
 
-.mb-sm {
+.mb-sm, .spots__title {
   margin-bottom: 16px !important;
 }
 
@@ -787,10 +789,23 @@ img {
   padding-bottom: 80px !important;
 }
 
-.content-width {
+.content-width, .spots {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
+}
+
+.main-title {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.sub-title {
+  color: #535353;
+}
+
+.spots__btn {
+  text-align: center;
 }
 
 @media (min-width: 480px) {
@@ -815,16 +830,16 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
-  .font-sm {
+  .font-sm, .sub-title {
     font-size: 16px;
   }
   .font-md {
     font-size: 19px;
   }
-  .font-lr {
+  .font-lr, .spots__title {
     font-size: 23px;
   }
-  .font-lg {
+  .font-lg, .main-title {
     font-size: 36px;
   }
   .mb-lg {
