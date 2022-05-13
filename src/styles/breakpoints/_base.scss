@@ -76,6 +76,16 @@ img {
   padding-top: $navHeight;
 }
 
+#main-content {
+  position: relative;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: -1;
+}
+
 #container {
   background-color: $cWhite;
   position: relative;
@@ -95,12 +105,12 @@ img {
   z-index: 100;
 
   &.triggered {
-    background-color: rgba(255,255,255,0.9);
-    box-shadow: 10px 0 25px -10px rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
   }
 
   &__nav {
-  display: none;  
+    display: none;
   }
 
   &__ul {
@@ -240,8 +250,14 @@ img {
 
   &__title {
     position: relative;
-    
-    @include p-base($display: none, $width: 100px, $height: 1px, $top: 50%, $left: -120px) {
+
+    @include p-base(
+      $display: none,
+      $width: 100px,
+      $height: 1px,
+      $top: 50%,
+      $left: -120px
+    ) {
       background-color: $cBlack;
       transform: translateY(-50%) scaleX(0);
       transition: transform 0.3s ease 1.6s;
@@ -249,7 +265,7 @@ img {
     }
 
     &.inview {
-      &::before{
+      &::before {
         transform: translateY(-50%);
       }
     }
@@ -265,7 +281,7 @@ img {
     @extend .mb-sm;
     margin: 0 auto;
     transition: box-shadow 1ms linear 0.8s;
-    
+
     & > img {
       object-fit: cover;
       width: 100%;
@@ -273,7 +289,7 @@ img {
       z-index: -1;
       position: relative;
     }
-    
+
     &.inview {
       box-shadow: inset 0 0 30px $cBlack;
     }
@@ -287,7 +303,7 @@ img {
 .logo {
   font-size: 42px;
   display: flex;
-  
+
   &__img {
     width: 0.7em;
   }
@@ -327,5 +343,60 @@ img {
   & .logo {
     font-size: 38px;
     justify-content: center;
+  }
+}
+
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  transform: translateY(-50%);
+
+  & a,
+  & span {
+    color: $cBlack;
+    text-decoration: none !important;
+    margin: 0 40px;
+    vertical-align: middle;
+  }
+
+  &.left {
+    left: 50px;
+
+    & .side__inner {
+      transform-origin: top left;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &.right {
+    right: 50px;
+
+    & .side__inner {
+      transform-origin: top right;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.icon {
+  position: relative;
+
+  @include p-base($left: -20px, $top: 50%, $width: 1em, $height: 1em) {
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &.twitter {
+    &::before {
+      background-image: url(../images/twitter.svg);
+    }
+  }
+  &.fb {
+    &::before {
+      background-image: url(../images/facebook.png);
+    }
   }
 }
