@@ -241,6 +241,7 @@
 
 .hero {
   overflow: hidden;
+  padding-top: 100px;
 }
 
 .hero__title {
@@ -919,11 +920,11 @@ img {
   font-size: 25px;
 }
 
-.mb-sm, .spots__title, .relax__title, .interests__sub, .interests__img {
+.mb-sm, .spots__title, .relax__title, .interests, .interests__sub, .interests__img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg {
+.mb-lg, .spots, .relax__inner {
   margin-bottom: 80px !important;
 }
 
@@ -931,7 +932,7 @@ img {
   padding-bottom: 16px !important;
 }
 
-.pb-lg {
+.pb-lg, .hero {
   padding-bottom: 80px !important;
 }
 
@@ -966,10 +967,6 @@ img {
 
 .purple {
   color: #904669;
-}
-
-#content {
-  padding-top: 100px;
 }
 
 #main-content {
@@ -1401,10 +1398,10 @@ Stylesheet: 960px以上のモニタで適用
   .font-lg, .main-title {
     font-size: 36px;
   }
-  .mb-lg {
+  .mb-lg, .spots, .relax__inner {
     margin-bottom: 150px !important;
   }
-  .pb-lg {
+  .pb-lg, .hero {
     padding-bottom: 150px !important;
   }
   .relax__inner::before {
@@ -1441,6 +1438,10 @@ Stylesheet: 960px以上のモニタで適用
   }
   .mobile-menu__btn {
     display: none;
+  }
+  .swiper-slide {
+    -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
   }
 }
 
