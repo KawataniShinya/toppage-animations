@@ -11,6 +11,7 @@
 - Google Fonts
 - Scroll Polyfill
 - Tween Max
+- pace.js
 
 ## Development Environment And Tools
 - Visual Studio Code
