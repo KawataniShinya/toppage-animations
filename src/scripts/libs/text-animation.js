@@ -27,8 +27,8 @@ class TweenTextAnimation extends TextAnimation {
             TweenMax.to(c, .6, {
                 ease: Back.easeOut,
                 delay: i * .05,
-                startAt: { y: '-50%', opacity: 0},
-                y: '0%',
+                startAt: { x: '-50%', y: '-50%', opacity: 0},
+                x: '0%', y: '0%',
                 opacity: 1
             });
         });
