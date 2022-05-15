@@ -9,9 +9,21 @@ class Main {
     this._init();
   }
 
+  set observers(val) {
+    this._observers.push(val);
+  }
+
+  get observers() {
+    return this._observers;
+  }
+
   _init() {
     new MobileMenu();
     this.hero = new HeroSlider(".swiper-container");
+    Pace.on('done', this._paceDone.bind(this));
+  }
+  
+  _paceDone() {
     this._scrollInit();
   }
 
@@ -54,29 +66,20 @@ class Main {
   }
 
   _scrollInit() {
-    this._observers.push(
-      new ScrollObserver(".nav-trigger", this._navAnimation.bind(this), {
-        once: false,
-      })
-    );
-    this._observers.push(
-      new ScrollObserver(".cover-slide", this._inviewAnimation)
-    );
-    this._observers.push(
-      new ScrollObserver(
-        ".tween-animate-title",
-        this._callbackTweenTextAnimation
-      )
-    );
-    this._observers.push(
-      new ScrollObserver(".animate-title", this._callbackTextAnimation)
-    );
-    this._observers.push(
-      new ScrollObserver(
-        ".swiper-container",
-        this._toggleSlideAnimation.bind(this),
-        { once: false }
-      )
-    );
+    this.observers = new ScrollObserver(".nav-trigger", this._navAnimation.bind(this), {once: false});
+    this.observers = new ScrollObserver(".cover-slide", this._inviewAnimation);
+    this.observers = new ScrollObserver(".tween-animate-title", this._callbackTweenTextAnimation);
+    this.observers = new ScrollObserver(".animate-title", this._callbackTextAnimation);
+    this.observers = new ScrollObserver(".swiper-container", this._toggleSlideAnimation.bind(this), {once: false} );
+  }
+
+  _destroyObservers() {
+    this.observers.forEach(ob => {
+      ob.destroy();
+    })
+  }
+
+  destroy() {
+    this._destroyObservers();
   }
 }
